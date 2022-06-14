@@ -35,8 +35,19 @@ resource "alicloud_security_group_rule" "allow_all_tcp" {
   security_group_id = alicloud_security_group.default.id
   cidr_ip           = "0.0.0.0/0"
 }
+resource "alicloud_adb_cluster" "cluster" {
+  db_cluster_version  = "3.0"
+  db_cluster_category = "Cluster"
+  db_node_class       = "C8"
+  db_node_count       = 2
+  db_node_storage     = 200
+  pay_type            = "PostPaid"
+  vswitch_id          = alicloud_vswitch.vsw.id
+  description         = var.name
+}
+
 resource "alicloud_adb_account" "account" {
-  availability_zone = "cn-hangzhou-i"
+  db_cluster_id       = alicloud_adb_cluster.cluster.id
   account_name        = "tftestnormal"
   account_password    = "Test12345"
   account_description = var.name
