@@ -1,11 +1,11 @@
 
 provider "mysql" {
-  endpoint = "my-database.example.com:3306"
+  endpoint = "116.62.157.43:3306"
   username = "app-user"
   password = "app-password"
 }
 provider "linux" {
-    host = "127.0.0.1"
+    host = "116.62.157.43"
     port = 22
     user = "root"
     password = "root"
