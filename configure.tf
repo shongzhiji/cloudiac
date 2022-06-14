@@ -10,9 +10,7 @@ provider "linux" {
     password = "root"
 }
 provider "alicloud" {
-    access_key = "LTAI5tKBBkjMi3uRqSkjsuBi"
-         secret_key = "ugRlX1VaN0gFgorGtVLqeD4OYxdCfJ"
-         region     ="cn-hangzhou"
+     
 }
 provider "nginx" {
   enable_symlinks = false # all resources are created in the path defined at directory_available. directory_enabled is ignored.
