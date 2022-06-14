@@ -13,10 +13,10 @@
         source = "getstackhead/nginx"
         version = "1.3.2"
       }
-          mysql = {
-      source = "ZobairQ/mysql"
-      version = "1.11.4"
-    }
+        mysql = {
+        source = "ZobairQ/mysql"
+        version = "1.11.1"
+      }
     }
   }
       
