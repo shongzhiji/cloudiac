@@ -7,7 +7,7 @@ variable "creation" {
 }
 
 data "alicloud_zones" "default" {
-  available_resource_creation = var.creation
+  available_resource_creation = "cn-hangzhou-i"
 }
 
 resource "alicloud_vpc" "vpc" {
