@@ -14,6 +14,7 @@ provider "linux" {
 provider "nginx" {
   directory_available = "/etc/nginx/conf.d"  # if not set, defaults to /etc/nginx/sites-available
   enable_symlinks = false # all resources are created in the path defined at directory_available. directory_enabled is ignored.
+}
 # This will create file /etc/nginx/conf.d/test.conf
 resource "nginx_server_block" "my-server" {
   filename = "test.conf"
