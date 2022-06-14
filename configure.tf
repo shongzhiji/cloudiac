@@ -1,18 +1,26 @@
-
 provider "mysql" {
+  endpoint = "116.62.157.43:3306"
   username = "app-user"
   password = "app-password"
 }
 provider "linux" {
+    host = "116.62.157.43"
+    port = 22
     user = "root"
     password = "root"
 }
-
+provider "alicloud" {
+    access_key = "LTAI5tKBBkjMi3uRqSkjsuBi"
+         secret_key = "ugRlX1VaN0gFgorGtVLqeD4OYxdCfJ"
+         region     ="cn-hangzhou"
+}
 provider "nginx" {
   enable_symlinks = false # all resources are created in the path defined at directory_available. directory_enabled is ignored.
 }
+
 # This will create file /etc/nginx/conf.d/test.conf
 resource "nginx_server_block" "my-server" {
+  filename = "test.conf"
   content = <<EOF
 # content of file here
 EOF
