@@ -19,15 +19,3 @@ terraform {
       }
     }
  }
-  provider "linux" {
-    # Configuration options
-  }
-provider "alicloud" {
-    region = "cn-hangzhou"
-}
- provider "nginx" {
-    # Configuration options
-  }   
- provider "mysql" {
-    # Configuration options
-  }
